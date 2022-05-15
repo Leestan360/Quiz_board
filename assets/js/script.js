@@ -32,6 +32,11 @@ const quizData = [
         correct: "answer",
     },
     {
-        question: ""
-    }
+        question: "Which language runs in a web browser?",
+        answer: "Python",
+        answer_1: "Java",
+        answer_2: "C",
+        answer_3: "JavaScript",
+        correct: "answer_3"
+    },
 ]
