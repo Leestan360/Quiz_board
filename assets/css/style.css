@@ -22,13 +22,13 @@ body > .quiz-holder {
     box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
 }
 
-body > .quiz-holder > .header {
+body > .quiz-holder > .quiz-header {
     padding: 4rem;
 }
 
-body > .quiz-holder > .header > h2 {
+body > .quiz-holder > .quiz-header > h2 {
     margin: 0;
-    text-align: center;
+    margin-left: -40px;
     padding: 1rem;
 }
 
