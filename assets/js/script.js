@@ -39,4 +39,15 @@ const quizData = [
         answer_3: "JavaScript",
         correct: "answer_3"
     },
-]
+];
+
+const quiz = document.getElementById('quiz')
+const answerEls = document.querySelectorAll('.answer')
+const questionEl = document.getElementById('question')
+const answer_text = document.getElementById('answer_text')
+const answer_1_text = document.getElementById('answer_1_text')
+const answer_2_text = document.getElementById('answer_2_text')
+const answer_3_text = document.getElementById('answer_3_text')
+const submitBtn = document.getElementById('submit')
+
+
