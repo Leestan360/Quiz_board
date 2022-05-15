@@ -52,7 +52,7 @@ const submitBtn = document.getElementById('submit');
 
 
 let currentQuiz = 0;
-let score = 20%
+let score = 20
 
 loadQuiz();
 
@@ -87,7 +87,7 @@ submitBtn.addEventListener('click', () => {
     const answer = getSelected();
     if (answer) {
         if (answer === quizData[currentQuiz].correct) {
-            score++;
+            score+=20;
         };
 
         currentQuiz++;
