@@ -47,7 +47,7 @@ ul > li > label {
 }
 
 .quiz > button {
-    background-color: green;
+    background-color: cornflowerblue;
     color: white;
     width: 100%;
     display: block;
@@ -57,4 +57,13 @@ ul > li > label {
     cursor: pointer;
     font-family: inherit;
     padding: 1.3rem;
+}
+
+.quiz > button:hover {
+    background-color: rgb(117, 159, 236);
+}
+
+.quiz > button:focus {
+    outline: none;
+    background-color: rgb(23, 199, 23);
 }
