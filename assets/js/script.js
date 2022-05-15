@@ -96,7 +96,7 @@ submitBtn.addEventListener('click', () => {
             loadQuiz();
         } else {
             quiz.innerHTML = `
-            <h2>You scored ${score}%</h2>
+            <h1 style="text-align: center">You scored ${score}%</h1>
 
             <button onclick = "location.reload()">Reload</button>
             `
