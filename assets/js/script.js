@@ -41,13 +41,65 @@ const quizData = [
     },
 ];
 
-const quiz = document.getElementById('quiz')
-const answerEls = document.querySelectorAll('.answer')
-const questionEl = document.getElementById('question')
-const answer_text = document.getElementById('answer_text')
-const answer_1_text = document.getElementById('answer_1_text')
-const answer_2_text = document.getElementById('answer_2_text')
-const answer_3_text = document.getElementById('answer_3_text')
-const submitBtn = document.getElementById('submit')
+const quiz = document.getElementById('quiz');
+const answerEls = document.querySelectorAll('.answer');
+const questionEl = document.getElementById('question');
+const answer_text = document.getElementById('answer_text');
+const answer_1_text = document.getElementById('answer_1_text');
+const answer_2_text = document.getElementById('answer_2_text');
+const answer_3_text = document.getElementById('answer_3_text');
+const submitBtn = document.getElementById('submit');
 
 
+let currentQuiz = 0;
+let score = 20%
+
+loadQuiz();
+
+function loadQuiz() {
+    deselectAnswers();
+
+    const currentQuizData = quizData[currentQuiz];
+
+    questionEl.innerText = currentQuizData.question;
+    answer_text.innerText = currentQuizData.answer;
+    answer_1_text.innerText = currentQuizData.answer_1;
+    answer_2_text.innerText = currentQuizData.answer_2;
+    answer_3_text.innerText = currentQuizData.answer_3;
+};
+
+function deselectAnswers() {
+    answerEls.forEach(answerEl => answerEl.checked = false);
+};
+
+function getSelected() {
+    let answer;
+    answerEls.forEach(answerEls => {
+        if (answerEl.checked) {
+            answer = answerEl.id;
+        }
+    });
+    return answer;
+};
+
+
+submitBtn.addEventListener('click', () => {
+    const answer = getSelected();
+    if (answer) {
+        if (answer === quizData[currentQuiz].correct) {
+            score++;
+        };
+
+        currentQuiz++;
+
+        if (currentQuiz < quizData.length) {
+            loadQuiz();
+        } else {
+            quiz.innerHTML = `
+            <h1>You scored ${score}</h1>
+
+            <button.click = "location.reload()">Reload</button>
+            `
+        }
+    }
+})
