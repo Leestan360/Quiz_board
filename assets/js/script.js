@@ -29,7 +29,7 @@ const quizData = [
         answer_1: "1990",
         answer_2: "1999",
         answer_3: "None of the above",
-        correct: "answer",
+        correct: "answer_0",
     },
     {
         question: "Which language runs in a web browser?",
@@ -96,9 +96,9 @@ submitBtn.addEventListener('click', () => {
             loadQuiz();
         } else {
             quiz.innerHTML = `
-            <h1>You scored ${score}</h1>
+            <h2>You scored ${score}%</h2>
 
-            <button.click = "location.reload()">Reload</button>
+            <button onclick = "location.reload()">Reload</button>
             `
         }
     }
