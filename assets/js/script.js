@@ -15,4 +15,23 @@ const quizData = [
         answer_3: "Cascading Styling Sheets",
         correct: "answer_2",
     },
+    {
+        question: "What year was Python launched?",
+        answer: "1993",
+        answer_1: "1991",
+        answer_2: "2000",
+        answer_3: "1990",
+        correct: "answer_1",
+    },
+    {
+        question: "What year was JavaScript launched?",
+        answer: "1995",
+        answer_1: "1990",
+        answer_2: "1999",
+        answer_3: "None of the above",
+        correct: "answer",
+    },
+    {
+        question: ""
+    }
 ]
